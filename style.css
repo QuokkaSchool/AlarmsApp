@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.wrapper-alarm {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+}
+
+.new-alarm {
+  padding: 10px 15px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.alarm {
+  width: calc((100% / 3) - 20px);
+  background-color: rgb(250, 250, 250);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 10px;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.alarm.finished {
+  outline: 3px solid rgb(204, 47, 47);
+  animation: ring 0.75s;
+}
+
+.alarm.finished button {
+  visibility: hidden;
+}
+
+.alarm input {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.alarm h1 {
+  font-family: monospace;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.alarm button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
